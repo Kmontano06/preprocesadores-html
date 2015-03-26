@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preprocesadores de HTML</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="preprocesadores-de-html">Preprocesadores de HTML</h1>
+
+<p>Un preprocesador es una herramienta que toma los valores introducidos y los transforma a otro estado. Puede ser que le des un archivo en SASS y lo transforma a CSS (o viceversa). El resultado de esa transformación es el archivo preprocesado.</p>
+
+
+
+<h3 id="algunos-preprocesadores-de-html-son">Algunos preprocesadores de html son:</h3>
+
+<ul>
+<li>HAML</li>
+<li>JADE</li>
+<li>Twig</li>
+<li>SLIM </li>
+<li>Handlebars</li>
+</ul>
+
+
+
+<h2 id="haml">HAML</h2>
+
+<p>Es un lenguaje de marcado ligero que se usa para describir el XHTML de un documento Web sin emplear el código embebido tradicional. Está diseñado para solucionar varios problemas de los motores de plantillas tradicionales y también para ser un lenguaje de marcado tan elegante como sea posible.</p>
+
+<p>Haml funciona como reemplazo de sistemas de plantillas de páginas embebidas como PHP, RHTML y ASP. Sin embargo, Halm elimina la necesidad de escribirXHTML explícito dentro de la plantilla, por ser en sí una descripción de XHTML, más algo de código para generar contenido dinámico.</p>
+
+<ul>
+<li>El marcado debería ser bonito: No debería usarse solamente como una herramienta para lograr que los navegadores muestren una página como el autor lo desee. El renderizado no es lo único que la gente tiene que ver; también se tiene que ver, modificar y entender el marcado. Por tanto, este debería ser tan amable y placentero como el resultado del renderizado.</li>
+<li>El marcado no debe repetirse: <br>
+<ol><li>XHTML implica grandes repeticiones. La mayoría de los elementos deben ser nombrados dos veces: una vez antes de su contenido y otra después.</li>
+<li>ERB agrega aun más repetición y caracteres innecesarios.</li>
+<li>Halm evita todo esto recurriendo al sangrado en vez del texto para determinar dónde empiezan y terminan los elementos y los bloques de código.</li>
+<li>Esto no solo da como resultado plantillas más compactas sino que además hace el código mucho más limpio a la vista.</li></ol></li>
+<li>El marcado debería tener buen sangrado: Uno de los mayores problemas de los lenguajes de plantillas tradicionales es que no solo no fomentan el código bien sangrado sino que encima lo hacen difícil o incluso imposible de escribir. El resultado es un XHTML confuso e ilegible. Halm formatea las etiquetas de manera que todas estén bien sangradas y reflejen la estructura subyacente del documento.</li>
+<li>La estructura de XHTML debería ser clara: XML y XHTML son formatos fundados sobre la idea de un documento estructurado. Tal estructura se refleja en su marcado, y asimismo debería reflejarse en metamarcado como Haml. Debido a que la lógica de Haml se basa en el sangrado de elementos hijos, esta estructura se preserva naturalmente, lo que hace al documento mucho más fácil y lógico de leer por simples humanos.</li>
+</ul>
+
+
+
+<h3 id="ejemplo-de-muestra">Ejemplo de muestra</h3>
+
+<p><img src="https://lh3.googleusercontent.com/5cUxuqhVg5y5SBbkPjVes_7uRmudISymgfspK7jxu6k=s0" alt="enter image description here" title="ejemplo haml.PNG"></p>
+
+<p>El Haml de arriba produce este XHTML</p>
+
+<p><img src="https://lh3.googleusercontent.com/9LUMKnX1uPc8VRCYiRV-d-Yo2DOsoDv_cTpWzOc2PPk=s0" alt="enter image description here" title="ejemplo2 haml.PNG"></p>
+
+
+
+<h2 id="jade">Jade</h2>
+
+<p>En lugar de alegrarte la vida con las CSS, lo hace con el HTML. <br>
+En resumen, vendría a ser cómo atajar en el código html, aunque como veremos realmente va mucho más allá, y con él puedes hacer cosas que con el html no podrías montar… pero sí, en resumen es quitarte algo de trabajo en el desarrollo del html, que evidentemente, si lo sumas a Stylus ya tienes que tus trabajos de maquetación quedan bastante reducidos en tiempo.</p>
+
+<p>html <br>
+  body <br>
+    // <br>
+      #content <br>
+        h1 Example</p>
+
+<p>———- Sacaría ———-</p>
+
+<pre><code>&lt;body&gt;
+ &lt;!--
+  &lt;div id="content"&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+  &lt;/div&gt;
+   --&gt;
+&lt;/body&gt;
+</code></pre>
+
+<p>———- Vamos más allá ———- <br>
+ ul <br>
+    li.first: a(href=’#’) foo <br>
+    li: a(href=’#’) bar <br>
+    li.last: a(href=’#’) baz</p>
+
+<p>La potencia y rapidez con que se puede maquetar uniendo esto a stylus. De este modo, podemos reciclar el código CSS para nuestro html, o al revés, cada uno lo utilizará como le vea más conveniente. <br>
+Su potencia no se queda aquí, ya que jade soporta filtros, iteraciones, condicionales, templates, y mucho más… <br>
+Les recomendamos encarecidamente echar un vistazo tanto a jade como a stylus, estamos convencidos de que también agilizará y nos ayudará en nuestro trabajo.</p>
+
+<p><img src="https://lh3.googleusercontent.com/4IIIq36uSYcfaYmfQOwKbJ2QQ8pDglsakl84uaKJRFc=s0" alt="enter image description here" title="ejemplo jade.PNG"></p>
+
+<p>Jade es un motor de plantillas de alto rendimiento fuertemente influenciado por Haml e implementado con JavaScript para node y browsers. </p>
+
+
+
+<h2 id="twig">Twig</h2>
+
+
+
+<h4 id="ramita-de-plantilla-designer">Ramita de plantilla Designer</h4>
+
+<p>A continuacion se describe la sintaxis y la semántica del motor de plantillas y será más útil como referencia para esas plantillas Twig creando.</p>
+
+
+
+<h4 id="synopsis">Synopsis</h4>
+
+<p>Una plantilla es simplemente un archivo de texto. Puede generar cualquier formato basado en texto (HTML, XML, CSV, LaTeX, etc.). No tiene una extensión específica, .html o .xml están muy bien.</p>
+
+<p>Una plantilla contiene variables o expresiones, que son reemplazados con valores cuando se evalúa la plantilla, y las etiquetas, que controlan la lógica de la plantilla.</p>
+
+<p>A continuación se muestra una plantilla mínima que ilustra algunos conceptos básicos:</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;ul id="navigation"&gt;
+    {% for item in navigation %}
+    &lt;li&gt;&lt;a href="{{ item.href }}"&gt;{{ item.caption }}&lt;/a&gt;&lt;/li&gt;
+    {% endfor %}
+ &lt;/ul&gt;
+
+    &lt;h1&gt;My Webpage&lt;/h1&gt;
+    {{ a_variable }}
+&lt;/body&gt;
+</code></pre>
+
+<p></p>
+
+
+
+<h4 id="variables">Variables</h4>
+
+<p>La aplicación pasa las variables en las plantillas para la manipulación en la plantilla. Las variables pueden tener atributos o elementos que puede acceder, también. La representación visual de una variable depende en gran medida de la aplicación proporciona. <br>
+Puede utilizar un punto para acceder a los atributos de una variable (métodos o propiedades de un objeto PHP o elementos de un array PHP), o el llamado sintaxis “subíndice” ([]) (.): <br>
+{{ foo.bar }} <br>
+{{ foo[‘bar’] }}</p>
+
+<p>Cuando el atributo contiene caracteres especiales (como - que serían interpretadas como el operador menos), utilizar la función de atributo en lugar de acceder al atributo de la variable:</p>
+
+<p>{# equivalent to the non-working foo.data-foo #} <br>
+{{ attribute(foo, ‘data-foo’) }}</p>
+
+
+
+<h4 id="configuración-de-variables">Configuración de variables</h4>
+
+<p>Puede asignar valores a variables dentro de los bloques de código. Misiones utilizan la etiqueta conjunto: <br>
+{% set foo = ‘foo’ %} <br>
+{% set foo = [1, 2] %} <br>
+{% set foo = {‘foo’: ‘bar’} %}</p>
+
+
+
+<h4 id="filtros">Filtros</h4>
+
+<p>Las variables pueden ser modificados por filtros. Los filtros se separa de la variable por una barra vertical (|) y pueden tener argumentos opcionales entre paréntesis. Múltiples filtros pueden ser encadenados. La salida de un filtro se aplica a la siguiente.</p>
+
+<p>El ejemplo siguiente elimina todas las etiquetas HTML desde el nombre y títulos de los casos es el siguiente:</p>
+
+<p>{{ name|striptags|title }}</p>
+
+<p>Los filtros que aceptan argumentos tienen paréntesis alrededor de los argumentos. Este ejemplo se unirá a una lista por comas:</p>
+
+<p>{{ list|join(‘, ‘) }}</p>
+
+<p>Para aplicar un filtro en una sección de código, envuélvalo en la etiqueta de filtro:</p>
+
+<p>{% filter upper %} <br>
+    This text becomes uppercase <br>
+{% endfilter %}</p>
+
+
+
+<h4 id="funciones">Funciones</h4>
+
+<p>Las funciones pueden ser llamadas para generar contenido. Las funciones son llamados por su nombre seguido de paréntesis (()) y pueden tener argumentos.</p>
+
+<p>Por ejemplo, la función de margen devuelve una lista que contiene una progresión aritmética de números enteros:</p>
+
+<p>{% for i in range(0, 3) %} <br>
+    {{ i }}, <br>
+{% endfor %}</p>
+
+
+
+<h4 id="nombrando-argumentos">Nombrando Argumentos</h4>
+
+<p>Se agregó el soporte para los argumentos con nombre en el Twig 1.12: Nuevo en la versión 1.12. <br>
+{% For i in range (bajo = 1, alta = 10, paso = 2)%} <br>
+     {{Yo}}, <br>
+{% Endfor%}</p>
+
+<p>Utilizando argumentos con nombre hace que sus plantillas más explícito sobre el significado de los valores que usted pasa como argumentos:</p>
+
+<p>{{Data | convert_encoding (‘UTF-8’, ‘iso-2022-jp’)}} <br>
+{# Versus #} <br>
+{{Datos | convert_encoding (de = “iso-2022-jp ‘, a’ = UTF-8 ‘)}}</p>
+
+<p>Los argumentos con nombre también pueden permitir que salte algunos argumentos para los que no desee cambiar el valor por defecto:</p>
+
+<p>{# El primer argumento es el formato de fecha, que por defecto es el formato de fecha global si se pasa nulo #} <br>
+{{“Ahora” | Fecha (null, “Europa / París”)}} <br>
+{# O saltar el valor de formato utilizando un argumento con nombre para la zona horaria #} <br>
+{{“Ahora” | Fecha (zona horaria = “Europa / París”)}}</p>
+
+<p>También puede utilizar ambos argumentos posicionales y nombrados en una llamada, en cuyo caso los argumentos posicionales siempre deben venir antes de argumentos con nombre:</p>
+
+<p>{{“Ahora” | Fecha (‘d / m / YH: i’, zona horaria = “Europa / París”)}}</p>
+
+
+
+<h2 id="slim">Slim</h2>
+
+<p>Slim es un lenguaje de plantillas, cuyo objetivo es reducir la vista sintaxis para las partes esenciales sin llegar a ser críptico. Comenzó como un ejercicio para ver cuánto podría ser eliminada de una plantilla estándar HTML (&lt;,&gt;, etiquetas de cierre, etc …). A medida que más personas se interesaron por SLIM, la funcionalidad creció y también lo hizo la flexibilidad de la sintaxis.</p>
+
+<p>Una breve lista de las características:</p>
+
+
+
+<h5 id="sintaxis-elegante">Sintaxis elegante:</h5>
+
+<ul>
+<li>Sintaxis abreviada y sin etiquetas de cierre (Uso de sangría en su lugar)</li>
+<li>Modo de estilo de HTML con etiquetas de cierre</li>
+<li>Etiquetas configurables de acceso directo <code>(# para &lt;div id = "..."&gt;</code> y. Para <code>&lt;div class = "..."&gt;</code>en la configuración por defecto).</li>
+</ul>
+
+
+
+<h5 id="seguridad">Seguridad:</h5>
+
+<ul>
+<li>HTML automática escapar por defecto</li>
+<li>Soporte para html?</li>
+</ul>
+
+
+
+<h5 id="altamente-configurable">Altamente configurable</h5>
+
+
+
+<h5 id="extensible-a-través-de-los-siguientes-plugins">Extensible a través de los siguientes plugins:</h5>
+
+<ul>
+<li>Lógica menos modo similar al del bigote</li>
+<li>Incluye</li>
+<li>Traductor / I18n</li>
+</ul>
+
+
+
+<h5 id="alto-rendimiento">Alto rendimiento:</h5>
+
+<ul>
+<li>Velocidad comparable a ERB / Erubis</li>
+<li>Streaming apoyo en Rails</li>
+</ul>
+
+
+
+<h5 id="con-el-apoyo-de-todos-los-principales-marcos-rails-sinatra">Con el apoyo de todos los principales marcos (Rails, Sinatra, …)</h5>
+
+
+
+<h5 id="soporte-unicode-completo-para-las-etiquetas-y-atributos">Soporte Unicode completo para las etiquetas y atributos</h5>
+
+
+
+<h5 id="motores-implícitos-como-markdown-y-textil">Motores implícitos como Markdown y Textil</h5>
+
+
+
+<h3 id="por-qué-utilizar-slim">¿Por qué utilizar Slim?</h3>
+
+<p>Slim le permite escribir plantillas muy mínimos que son fáciles de mantener y prácticamente garantiza que usted escribe HTML bien formado y XML. <br>
+También pensamos que la sintaxis Slim también es estético y lo hace mucho más divertido de escribir plantillas. Ya que se puede utilizar slim como un gota en el reemplazo de todo el marco principal se puede empezar fácilmente. <br>
+La arquitectura Slim es muy flexible y permite escribir extensiones y plugins de sintaxis.</p>
+
+
+
+<h4 id="ejemplo-de-sintaxis">Ejemplo de sintaxis</h4>
+
+<p>Aquí está un ejemplo rápido para demostrar lo que una plantilla slim se ve así:</p>
+
+<p>doctype html <br>
+html <br>
+  head <br>
+    title Slim Examples <br>
+    meta name=”keywords” content=”template language” <br>
+    meta name=”author” content=author <br>
+    link rel=”icon” type=”image/png” href=file_path(“favicon.png”) <br>
+    javascript: <br>
+      alert(‘Slim supports embedded javascript!’)</p>
+
+<p>body <br>
+    h1 Markup examples</p>
+
+<pre><code>#content
+  p This example shows you how a basic Slim file looks.
+
+== yield
+
+- if items.any?
+  table#items
+    - for item in items
+      tr
+        td.name = item.name
+        td.price = item.price
+- else
+  p No items found. Please add some inventory.
+    Thank you!
+
+div id="footer"
+  == render 'footer'
+  | Copyright &amp;copy; #{@year} #{@author}
+</code></pre>
+
+
+
+<h2 id="handlebars">Handlebars</h2>
+
+<p>Handlebars es un popular sistema de plantillas en Javascript que te permite crear y formatear código HTML de una manera muy sencilla. En lugar de hacer operaciones tediosas en librerías como jQuery para tocar el DOM insertando elementos de manera independiente con append o prepend, te permite crear bloques de código HTML, escritos directamente con HTML que poblarás con datos que te vengan de un JSON. Es tan sencillo como escribir HTML y tan potente que te permite realizar operaciones de recorrido de estructuras que encontramos en otros sistemas de plantillas en lenguajes como PHP.</p>
+
+<p>Debe utilizar Handlebars.js cuando: </p>
+
+<ul>
+<li>Se utiliza un marco de JavaScript front-end como Backone.js, Ember.js, y similares; más front-end JavaScript marcos se basan en motores de plantillas</li>
+<li>La aplicación o pagina se actualizará con frecuencia-</li>
+<li>Usted tiene varias pilas tecnología que dependen de los datos desde el servidor y desea que todas las pilas de tecnología para procesar los mismos datos</li>
+<li>Su aplicación tiene mucha interactividad y es muy sensible</li>
+<li>Usted desea gestionar fácilmente su contenido HTML.</li>
+</ul>
+
+<p>Las razones por las que deben utilizar Handlebars.js:</p>
+
+<ul>
+<li>Handlebars es uno de los más avanzados (pre-compilación y similares), rico en características, y popular de todos los motores de plantillas de JavaScript, y tiene la comunidad más activa.</li>
+<li>Handlebars es un motor de plantillas-lógica menos, lo que significa que hay poca o ninguna lógica en las plantillas que se encuentran en la página HTML.</li>
+</ul>
+
+
+
+<h3 id="las-tres-partes-principales-de-handlebars-templating">Las tres partes principales de Handlebars Templating:</h3>
+
+<p>Para utilizar Manillar, primero se vincula al archivo Handlebars.js en el bloque de cabecera de su página HTML, tal como lo hace para jQuery o cualquier archivo .js  <br>
+Luego hay tres piezas principales de código que utiliza para Handlebars Templating: </p>
+
+<p>1- Handlebars.js Expresiones : Un Handlebars simple expresión se escribe así, donde el “contenido” puede ser una variable o una función auxiliar con o sin-parámetros:  <br>
+Ejemplo:  <br>
+<em>“{{Contenido}}”</em>.</p>
+
+<p>2- Los datos (o contexto): La segunda pieza de código en Handlebars Templating son los datos que desea mostrar en la página. Se pasa los datos como un objeto (un objeto común de JavaScript) a la función manillares. El objeto de datos se llama el contexto. Y este objeto puede estar compuesto de arrays, cadenas, números, otros objetos, o una combinación de todos estos. <br>
+ Ejemplo:  <br>
+ var theData = {clientes: [{nombre: “Michael”, Apellidos: “Alexander”, edad: 20 }, {nombre: “John”, Apellidos: “Allen”, edad: 29 }]};</p>
+
+<p>3- El Handlebars Compile Función: La última pieza de código que necesitamos para manillares de plantillas es en realidad una ejecución de dos pasos <br>
+1. Compilar la plantilla con la función Handlebars.compile.  <br>
+2. A continuación, utilice esa función compilado para invocar el objeto de datos que se le pasa.</p></div></body>
+</html>
